@@ -118,22 +118,34 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-background/10">
-          <p className="text-background/50 text-sm mb-4 sm:mb-0">
-            © {new Date().getFullYear()} GRC Ocean Concept Ltd. All rights reserved.
-          </p>
-          <button
-            onClick={scrollToTop}
-            className="group flex items-center gap-2 text-background/50 hover:text-accent text-sm transition-colors"
-          >
-            Back to Top
-            <span className="w-8 h-8 bg-background/10 group-hover:bg-accent rounded-lg flex items-center justify-center transition-colors">
-              <ArrowUp className="w-4 h-4" />
-            </span>
-          </button>
-        </div>
-      </div>
+      {/* Bottom Bar */}
+              <div className="pt-8 border-t border-background/10">
+                <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
+                  <p className="text-background/50 text-sm mb-4 sm:mb-0">
+                    © {new Date().getFullYear()} GRC Ocean Concept Ltd. All rights reserved.
+                  </p>
+                  <button
+                    onClick={scrollToTop}
+                    className="group flex items-center gap-2 text-background/50 hover:text-accent text-sm transition-colors"
+                  >
+                    Back to Top
+                    <span className="w-8 h-8 bg-background/10 group-hover:bg-accent rounded-lg flex items-center justify-center transition-colors">
+                      <ArrowUp className="w-4 h-4" />
+                    </span>
+                  </button>
+                </div>
+                <div className="flex justify-center pt-4 border-t border-background/10">
+                  <a
+                    href="https://visylo.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-background/40 hover:text-accent text-xs transition-colors duration-300"
+                  >
+                    Powered by Visylo Consulting
+                  </a>
+                </div>
+              </div>
+            </div>
     </footer>
   );
 }
