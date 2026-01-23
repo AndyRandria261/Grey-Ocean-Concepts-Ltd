@@ -57,7 +57,7 @@ export function About() {
             transition={{ delay: 0.1 }}
             className="font-outfit text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
           >
-            Pioneers in Glass{" "}
+            Advanced Glass & Façade Solutions{" "} 
             <span className="text-gradient">in Mauritius</span>
           </motion.h2>
           <motion.p
@@ -67,7 +67,7 @@ export function About() {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground text-lg leading-relaxed"
           >
-            GRC Ocean Concept Ltd has established itself as a leader in façade engineering 
+            GRE Ocean Concept Ltd has established itself as a leader in façade engineering 
             and the glass industry in Mauritius. Our passion for innovation and commitment 
             to excellence enables us to transform your visions into reality.
           </motion.p>

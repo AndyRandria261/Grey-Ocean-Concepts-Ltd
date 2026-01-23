@@ -19,7 +19,7 @@ const categories = [
   "Shower Cabins",
   "Doors & Windows",
   "Kitchen",
-  "Façade",
+  "Facade",
 ];
 
 interface Project {

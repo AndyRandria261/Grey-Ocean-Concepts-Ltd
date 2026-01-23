@@ -15,14 +15,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+230 5 941 2911",
+    value: "+230 5941 2911",
     href: "tel:+23059412911",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "garlandoo@greconcept.com",
-    href: "mailto:garlandoo@greconcept.com",
+    value: "contact@greconcept.com",
+    href: "mailto:contact@greconcept.com",
   },
   {
     icon: Clock,

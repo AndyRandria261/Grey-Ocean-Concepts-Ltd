@@ -47,8 +47,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-outfit text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6"
           >
-            Glass Excellence{" "}
-            <span className="text-gradient">Redefined</span>
+            Empowering Dreams{" "}
+            <span className="text-gradient">Driving Success</span>
           </motion.h1>
 
           {/* Subheadline */}

@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import logoLight from "@/assets/logo-light.png";
 
 const footerLinks = {
@@ -17,9 +18,29 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61559206295774", label: "Facebook" },
+  { icon: Linkedin, href: "#", label: "LinkedIn" },// Pending
+];
+
+const contactInfo = [
+  {
+    icon: MapPin,
+    value: "Port Louis, Mauritius",
+  },
+  {
+    icon: Phone,
+    value: "+230 5 941 2911",
+    href: "tel:+23059412911",
+  },
+  {
+    icon: Mail,
+    value: "contact@greconcept.com",
+    href: "mailto:contact@greconcept.com",
+  },
+  {
+    icon: Clock,
+    value: "Mon-Fri: 8am-5pm",
+  },
 ];
 
 export function Footer() {
@@ -35,7 +56,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <img
               src={logoLight}
-              alt="GRC Ocean Concept"
+              alt="GRE Ocean Concept"
               className="h-12 w-auto mb-6"
             />
             <p className="text-background/60 text-sm leading-relaxed mb-6">
@@ -94,26 +115,28 @@ export function Footer() {
           <div>
             <h4 className="font-outfit font-semibold text-lg mb-5">Get in Touch</h4>
             <div className="space-y-3 text-sm">
-              <p className="text-background/60">
-                Port Louis, Mauritius
-              </p>
-              <p>
-                <a
-                  href="tel:+23059412911"
-                  className="text-background/60 hover:text-accent transition-colors"
-                >
-                  +230 5 941 2911
-                </a>
-              </p>
-              <p>
-                <a
-                  href="mailto:garlandoo@greconcept.com"
-                  className="text-background/60 hover:text-accent transition-colors"
-                >
-                  garlandoo@greconcept.com
-                </a>
-              </p>
-              <p className="text-background/60">Mon-Fri: 8am-5pm</p>
+              {contactInfo.map((info, idx) => {
+                const Icon = info.icon;
+                const content = info.href ? (
+                  <a
+                    href={info.href}
+                    className="text-background/60 hover:text-accent transition-colors"
+                  >
+                    {info.value}
+                  </a>
+                ) : (
+                  <span className="text-background/60">{info.value}</span>
+                );
+
+                return (
+                  <div key={idx} className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center">
+                      <Icon className="w-4 h-4 text-background/80" />
+                    </div>
+                    <div className="text-sm">{content}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -122,7 +145,7 @@ export function Footer() {
               <div className="pt-8 border-t border-background/10">
                 <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
                   <p className="text-background/50 text-sm mb-4 sm:mb-0">
-                    © {new Date().getFullYear()} GRC Ocean Concept Ltd. All rights reserved.
+                    © {new Date().getFullYear()} GRE Ocean Concept Ltd. All rights reserved.
                   </p>
                   <button
                     onClick={scrollToTop}
